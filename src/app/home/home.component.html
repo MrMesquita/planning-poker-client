@@ -1,0 +1,23 @@
+<div class="card">
+    <p-toolbar>
+        <div class="p-toolbar-group-start">
+        <h2>Planning Poker</h2>
+    </div>
+    <div class="p-toolbar-group-center">
+        <span class="inviteButton">
+            <p-button icon="pi pi-user-plus" label="Convidar Jogadores" [outlined]="true" severity="success"/>
+        </span>
+        <p-sidebar [(visible)]="sidebar" position="right">
+            <h4>Issues</h4>
+            <div>
+                <textarea *ngIf="isTextareaVisible" id="issueTextarea"></textarea>
+                <div>
+                    <button (click)="toggleTextarea()"><span>Add another issue</span></button>
+                </div>
+            </div>
+        </p-sidebar>
+        <p-button  type="button" class="mr-2" (click)="sidebar = true" [outlined]="true" severity="success" icon="pi pi-clipboard"></p-button>
+    </div>
+</p-toolbar>
+</div>
+
